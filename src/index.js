@@ -1,4 +1,4 @@
-const nameChanged = () => {
+function nameChanged() = {
   /* 
     This is an Array - An Array is a list of things that are seperated by commas. You can reconise an Array by the [] that 
     surrounds the list of things. Each thing in this array is a name, each name is made up of text and therefore it is 
@@ -14,9 +14,7 @@ const nameChanged = () => {
     "Pine",
     "Pinky",
     "Jingle",
-    "Twinkle",
-    "Cupcake",
-    "Floof"
+    "Twinkle"
   ];
   
   /* 
@@ -77,11 +75,19 @@ const nameChanged = () => {
   
   */
 
+  // Create the elfName variable, ready to use later
   let elfName = "";
 
-  // Store first & last name lengths
-  let firstNameLength = firstName.length;
-  let lastNameLength = lastName.length;
+  /* 
+    Here we store the length of the name the user typed into the input. The length is referring to how many letters are 
+    in the name
+    
+    Don't forget to change this and do it for the first and second name if you do the additional tasks
+    eg.
+      let firstNameLength = firstName.length;
+      let lastNameLength = lastName.length;
+  */
+  let firstNameLength = enteredName.length;
 
   /* 
     'if' is a keyword, keywords are words that are reserved by the coding language and assigned a specific task. 
@@ -89,18 +95,28 @@ const nameChanged = () => {
     run any code inside of the next {}
     
     In this case we're checking to see if the first name has one or more letter in it
-    If we didn't do this check and just assume that the user had typed something into the text input, what would happen?
+    If we didn't do this check and just assumed that the user had typed something into the text input, what would happen?
   */
   if (firstNameLength > 0) {
     // Find the elf first name & store it in elfName
     elfName += elfFirstNames[firstNameLength - 1];
   }
+  /*
+    -- ADDITIONAL TASK: Fix the bug --
+    There is a bug in the block of code above. If your name is longer than the number of elf names in your array, what
+    happens?
+    
+    Can you fix it?
+  */
 
-  // Check last name exists
-  if (lastNameLength) {
-    // Find the elf last name & add it to the end of elfName with a space
-    elfName += " " + elfLastNames[lastNameLength - 1];
-  }
+  /*
+    -- ADDITIONAL TASK: Store the first name and last name for later use --
+   
+    if (lastNameLength) {
+      // Find the elf last name & add it to the end of elfName with a space
+      elfName += " " + elfLastNames[lastNameLength - 1];
+    }
+  */
 
   // Find the HTML div with id 'elfName' & put the elfName text inside
   document.getElementById("elfName").innerHTML = "Elf name: " + elfName;
