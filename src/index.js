@@ -1,4 +1,4 @@
-function nameChanged() = {
+function nameChanged() {
   /* 
     This is an Array - An Array is a list of things that are seperated by commas. You can reconise an Array by the [] that 
     surrounds the list of things. Each thing in this array is a name, each name is made up of text and therefore it is 
